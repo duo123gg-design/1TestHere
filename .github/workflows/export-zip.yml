@@ -1,0 +1,30 @@
+
+name: Export ZIP as artifact
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export-zip.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify source archive
+        run: test -s 1615741.zip && ls -lh 1615741.zip
+
+      - name: Upload source archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-1615741-zip
+          path: 1615741.zip
+          if-no-files-found: error
+          retention-days: 1
