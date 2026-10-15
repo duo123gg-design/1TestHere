@@ -19,12 +19,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verify source archive
-        run: test -s 1615741.zip && ls -lh 1615741.zip
+        run: test -s Kuro3D_V706_TILED_2D_PREVIEW_OPTIMIZATION_PASS113.zip && ls -lh Kuro3D_V706_TILED_2D_PREVIEW_OPTIMIZATION_PASS113.zip
 
       - name: Upload source archive
         uses: actions/upload-artifact@v4
         with:
-          name: source-1615741-zip
-          path: 1615741.zip
+          name: source-Kuro3D_V706_TILED_2D_PREVIEW_OPTIMIZATION_PASS113.zip
+          path: Kuro3D_V706_TILED_2D_PREVIEW_OPTIMIZATION_PASS113.zip
           if-no-files-found: error
           retention-days: 1
