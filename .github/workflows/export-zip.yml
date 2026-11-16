@@ -19,12 +19,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verify source archive
-        run: test -s 151808185.zip && ls -lh 151808185.zip
+        run: test -s 51580423.zip && ls -lh 51580423.zip
 
       - name: Upload source archive
         uses: actions/upload-artifact@v4
         with:
-          name: source-151808185.zip
-          path: 151808185.zip
+          name: source-51580423.zip
+          path: 51580423.zip
           if-no-files-found: error
           retention-days: 1
