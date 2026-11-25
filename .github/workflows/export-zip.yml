@@ -19,12 +19,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verify source archive
-        run: test -s 532242621.zip && ls -lh 532242621.zip
+        run: test -s Kuro3D_V1702_UV_PROJECTION_CACHE_GENERATION_SAFETY.zip && ls -lh Kuro3D_V1702_UV_PROJECTION_CACHE_GENERATION_SAFETY.zip
 
       - name: Upload source archive
         uses: actions/upload-artifact@v4
         with:
-          name: source-532242621.zip
-          path: 532242621.zip
+          name: source-Kuro3D_V1702_UV_PROJECTION_CACHE_GENERATION_SAFETY.zip
+          path: Kuro3D_V1702_UV_PROJECTION_CACHE_GENERATION_SAFETY.zip
           if-no-files-found: error
           retention-days: 1
